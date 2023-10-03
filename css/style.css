@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 720px;
+    border-bottom: 15px solid rgb(26, 149, 26);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Aumente a largura desejada */
+    height: 80%;
+    opacity: 0.8;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+#score {
+    position: absolute;
+    top: 10px; /* Ajuste a posição vertical conforme necessário */
+    left: 10px; /* Ajuste a posição horizontal conforme necessário */
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'New Super Mario Font U', sans-serif; /* Use a fonte apropriada */
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 999; /* Certifique-se de que o contador esteja acima de outros elementos, se necessário */
+}
+
+.restart-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -180%);
+    background-color: #f00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    border: 2px solid #000;
+    text-align: center;
+    z-index: 999;
+}
+
+.restart-container button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'New Super Mario Font U', sans-serif;
+    border: none;
+    padding: 5px 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.restart-container:hover{
+    background-color: #762b2b;
+}
+
+.github-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-300%, 180px);
+    width: 50px; /* Defina o tamanho desejado para o círculo */
+    height: 50px; /* Defina o tamanho desejado para o círculo */
+    background-color: #f00; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Cria um círculo usando um border-radius de 50% */
+    z-index: 999; /* Certifique-se de que o círculo esteja acima de outros elementos, se necessário */
+}
+
+.github-container a {
+    border: solid;
+    border: 2px solid #000;
+    background-color: #f00;
+    border-radius: 100%;
+    min-width: 2rem;
+    max-width: 4rem;
+    display: flex;
+    align-content: center;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.github-container a:hover{
+    background-color: #762b2b;
+    border-color: none;
+}
+/*  */
+.linkedin-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 180px);
+    width: 50px; /* Defina o tamanho desejado para o círculo */
+    height: 50px; /* Defina o tamanho desejado para o círculo */
+    background-color: #f00; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Cria um círculo usando um border-radius de 50% */
+    z-index: 999; /* Certifique-se de que o círculo esteja acima de outros elementos, se necessário */
+}
+
+.linkedin-container a {
+    border: solid;
+    border: 2px solid #000;
+    background-color: #f00;
+    border-radius: 100%;
+    min-width: 2rem;
+    max-width: 4rem;
+    display: flex;
+    align-content: center;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.linkedin-container a:hover{
+    background-color: #762b2b;
+    border-color: none;
+}
+/*  */
+.email-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, 180px);
+    width: 50px; /* Defina o tamanho desejado para o círculo */
+    height: 50px; /* Defina o tamanho desejado para o círculo */
+    background-color: #f00; /* Cor de fundo do círculo */
+    border-radius: 50%; /* Cria um círculo usando um border-radius de 50% */
+    z-index: 999; /* Certifique-se de que o círculo esteja acima de outros elementos, se necessário */
+}
+
+.email-container a {
+    border: solid;
+    border: 2px solid #000;
+    background-color: #f00;
+    border-radius: 100%;
+    min-width: 2rem;
+    max-width: 4rem;
+    display: flex;
+    align-content: center;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.email-container a:hover{
+    background-color: #762b2b;
+    border-color: none;
+}
+
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
