@@ -28,16 +28,45 @@
 
 #score {
     position: absolute;
-    top: 10px; /* Ajuste a posição vertical conforme necessário */
-    left: 10px; /* Ajuste a posição horizontal conforme necessário */
-    background-color: #000;
-    color: #fff;
-    font-size: 24px;
-    font-family: 'New Super Mario Font U', sans-serif; /* Use a fonte apropriada */
+    top: 1.2vw; /* Ajuste a posição vertical conforme necessário */
+    left: 180vh; /* Ajuste a posição horizontal conforme necessário */
+    color: #ccff00;
+    font-size: 50px;
+    font-family: 'New Super Mario Font U', sans-serif; 
     padding: 5px 10px;
     border-radius: 5px;
-    z-index: 999; /* Certifique-se de que o contador esteja acima de outros elementos, se necessário */
+    z-index: 999; 
 }
+
+.bonus-image {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    bottom: 300px; /* Comece abaixo da tela */
+    z-index: 2;
+    animation: coin-animation 3s ease-in-out forwards; /* Use uma animação chamada coin-animation */
+}
+
+
+.pause-container {
+    position: absolute;
+    border: none; 
+    top: 40px;
+    left: 40px;
+}
+
+#pause-button {
+    background-color: transparent; /* Defina o background-color como transparent */
+    border: none; 
+}
+
+#pause {
+    font-size: 100px;
+    color: #ff0000; /* Defina a cor do ícone, se necessário */
+    border: none; 
+
+}
+
 
 .restart-container {
     position: absolute;
@@ -68,16 +97,18 @@
     background-color: #762b2b;
 }
 
+
 .github-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-300%, 180px);
-    width: 50px; /* Defina o tamanho desejado para o círculo */
-    height: 50px; /* Defina o tamanho desejado para o círculo */
-    background-color: #f00; /* Cor de fundo do círculo */
-    border-radius: 50%; /* Cria um círculo usando um border-radius de 50% */
-    z-index: 999; /* Certifique-se de que o círculo esteja acima de outros elementos, se necessário */
+    width: 50px;
+    height: 50px; 
+    background-color: #f00; 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 999;
 }
 
 .github-container a {
@@ -105,11 +136,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, 180px);
-    width: 50px; /* Defina o tamanho desejado para o círculo */
-    height: 50px; /* Defina o tamanho desejado para o círculo */
-    background-color: #f00; /* Cor de fundo do círculo */
-    border-radius: 50%; /* Cria um círculo usando um border-radius de 50% */
-    z-index: 999; /* Certifique-se de que o círculo esteja acima de outros elementos, se necessário */
+    width: 50px; 
+    height: 50px; 
+    background-color: #f00;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 999; 
 }
 
 .linkedin-container a {
@@ -137,11 +169,12 @@
     top: 50%;
     left: 50%;
     transform: translate(200%, 180px);
-    width: 50px; /* Defina o tamanho desejado para o círculo */
-    height: 50px; /* Defina o tamanho desejado para o círculo */
-    background-color: #f00; /* Cor de fundo do círculo */
-    border-radius: 50%; /* Cria um círculo usando um border-radius de 50% */
-    z-index: 999; /* Certifique-se de que o círculo esteja acima de outros elementos, se necessário */
+    width: 50px; 
+    height: 50px; 
+    background-color: #f00;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    border-radius: 50%; 
+    z-index: 999; 
 }
 
 .email-container a {
@@ -172,6 +205,13 @@
     animation: pipe-animation 1.5s infinite linear;
 }
 
+/* .turtle{
+    position: absolute;
+    bottom: 200px;
+    width: 80px;
+    animation: turtle-animation 4s infinite linear;
+} */
+
 .mario {
     width: 150px;
     position: absolute;
@@ -197,6 +237,16 @@
         right: 100%;
     }
 }
+
+/* @keyframes turtle-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+} */
 
 @keyframes jump {
 
@@ -229,5 +279,23 @@
 
     to {
         right: 100%;
+    }
+}
+
+@keyframes coin-animation {
+    0% {
+        bottom: -10px; /* Comece abaixo da tela */
+        opacity: 0; /* Comece invisível */
+    }
+    30% {
+        bottom: 75; /* Suba a moeda */
+        opacity: 0.5; /* Tornar visível */
+    }
+    60% {
+        bottom: 150; /* Suba a moeda */
+        opacity: 1; /* Tornar visível */
+    }
+    100% {
+        bottom: 300px; /* Pare no topo da tela */
     }
 }

@@ -19,15 +19,21 @@
         <img src="./images/clouds.png" class="clouds">
         <img src="./images/mario.gif" class="mario">
         <img src="./images/pipe.png" class="pipe">
-        <img src="./images/gameoverscreen.jpg" class="game-over">
+        <!-- <img src="./images/turtle-flying.png" class="turtle"> -->
+        <img src="./images/gameoverscreen.jpg" class="game-over" style='display: none;'>
     </div>
 
-    <div class="score"><span id="score">0</span></div>
 
-    <div class="restart-container">
+    <div class="score"><span id="score"></span></div>
+
+    <div class="restart-container" >
         <button id="restart-button">Restart</button>
     </div>
-
+    
+   <div class="pause-container">
+    <button id="pause-button" tabindex="-1"><i class="fa-solid fa-pause" id="pause" style="color: #ff0000;"></i></button>
+   </div>
+    
     <div class="github-container">
         <a href="https://github.com/ThVbs"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
     </div>
@@ -39,7 +45,7 @@
     <div class="email-container">
         <a href="mailto:r2dti265@gmail.com?"><i id="mail" class="fas fa-envelope" style="color: #ffffff;"></i></a>
     </div>
-    
+       
 
     <style>
         @import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
